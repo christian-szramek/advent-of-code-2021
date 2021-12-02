@@ -1,5 +1,22 @@
-// open and read file
 fs = require('fs');
+
+// check command line arguments length
+if (process.argv.length !== 3) {
+	console.warn('Usage: node two.js example');
+	console.log('or');
+	console.warn('Usage: node two.js input');
+	process.exit();
+}
+
+// check for correct third argument
+if (process.argv[2] !== 'example' && process.argv[2] !== 'input') {
+	console.warn('Usage: node two.js example');
+	console.log('or');
+	console.warn('Usage: node two.js input');
+	process.exit();
+}
+
+// open and read file
 fs.readFile(`./${process.argv[2]}.txt`, 'utf8', (err, data) =>
 	handleFile(err, data)
 );

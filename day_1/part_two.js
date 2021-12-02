@@ -1,6 +1,13 @@
 fs = require('fs');
 
+// check command line arguments
+if (process.argv.length !== 2) {
+	console.warn('Usage: node part_two.js');
+	process.exit();
+}
+
 // open and read file
+// to run with the example file change input.txt to example.txt
 fs.readFile('./input.txt', 'utf8', (err, data) => handleFile(err, data));
 
 // save values inside an array
