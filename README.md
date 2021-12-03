@@ -5,4 +5,6 @@ Solution Code for the Advent of Code (https://adventofcode.com/2021) in NodeJs
 https://nodejs.org/en/download/
 
 # Usage
-Move to the task you want to execute and type: node <taskname> . If extra arguments are required the program will show this in the terminal.
+Move to the task you want to execute and type: <br>
+$ node "taskname".js  <br>
+If extra arguments are required the program will show this in the terminal.
